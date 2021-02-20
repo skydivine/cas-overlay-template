@@ -1,0 +1,10 @@
+{
+    "@class" : "org.apereo.cas.services.RegexRegisteredService",
+    "serviceId" : "http://localhost/login.php",
+    "name" : "ApplicationName",
+    "id" : 1001,
+    "evaluationOrder" : 10,
+    "attributeReleasePolicy" : {
+      "@class" : "org.apereo.cas.services.ReturnAllAttributeReleasePolicy"
+    }
+  }
