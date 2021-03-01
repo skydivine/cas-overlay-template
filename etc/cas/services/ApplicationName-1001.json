@@ -1,0 +1,26 @@
+{
+  "@class": "org.apereo.cas.services.RegexRegisteredService",
+  "serviceId": "^(https|http)://.*",
+  "name": "ApplicationName",
+  "id": 1001,
+  "evaluationOrder": 10,
+  "attributeReleasePolicy": {
+    "@class": "org.apereo.cas.services.ReturnAllowedAttributeReleasePolicy",
+    "allowedAttributes": [
+      "java.util.ArrayList",
+      [
+        "cn",
+        "mail",
+        "sn",
+        "description",
+        "telephoneNumber"
+      ]
+    ],
+    "consentPolicy": {
+      "@class": "org.apereo.cas.services.consent.DefaultRegisteredServiceConsentPolicy",
+      "excludedAttributes": ["java.util.LinkedHashSet", ["description"]],
+      "includeOnlyAttributes": ["java.util.LinkedHashSet", ["description"]],
+      "enabled": true
+    }
+  }
+}
